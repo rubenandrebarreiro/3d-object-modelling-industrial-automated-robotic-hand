@@ -1,0 +1,2 @@
+# 3d-object-modelling-robot-hand
+A 3rd year's project, of the BSc. degree made in FCT NOVA, in the subject of Computer Graphics and Interfaces. This project was built using HTML, CSS, JavaScript and WebGL. The application allows to move and manipulate an Industrial Automated Robot, all using 3D Modelling and 3D Objects. The Robot can be moved along the floor, do grab movements and rotate some of its own components. The movements and actions of the Robot are always performed using the keyboard and you can see all the action of multiple angles, using an Axonometric Projection!
