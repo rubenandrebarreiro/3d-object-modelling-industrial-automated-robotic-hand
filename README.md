@@ -13,7 +13,7 @@
 ***
 
 ![https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/master/imgs/screenshot-2.jpg](https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/master/imgs/screenshot-2.jpg)
-###### 3D Object Modelling (Industrial Automated Robotic Hand) - Screenshot #1
+###### 3D Object Modelling (Industrial Automated Robotic Hand) - Screenshot #2
 
 ***
 
