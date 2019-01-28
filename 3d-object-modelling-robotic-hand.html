@@ -1,0 +1,298 @@
+<!-- FCT NOVA | FCT-UNL (Faculty of Sciences and Technology of New University of Lisbon) -->
+<!-- Integrated Master (BSc./MSc.) of Computer Engineering -->
+
+<!-- Computer Graphics and Interfaces (2016-2017) -->
+
+<!-- Lab Work 3 - 3D Object Modelling - Industrial Automated Robotic Hand -->
+
+<!-- Daniel Filipe Pimenta - no. 45404 - d.pimenta@campus.fct.unl.pt -->
+<!-- Ruben André Barreiro - no. 42648 - r.barreiro@campus.fct.unl.pt -->
+
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/rubenandrebarreiro/rubenandrebarreiro.github.io/master/assets/images/javascript-logo-1.png"/>
+
+    <script id="vertex-shader-2" type="x-shader/x-vertex">
+    const vec4 lightPosition = vec4(0.0, 0.0, 10.0, 1.0);    // in WC
+
+    attribute vec4 vPosition;   // vertex position in modelling coordinates
+    attribute vec4 vNormal;     // vertex normal in modelling coordinates
+
+    uniform mat4 mView;         // view transformation matrix (for points)
+    uniform mat4 mViewVectors;  // view transformation matrix (for vectors)
+    uniform mat4 mModelView;    // model-view transformation (for points)
+    uniform mat4 mNormals;      // model-view transformation (for vectors/normals)
+
+    uniform mat4 mProjection;   // projection matrix
+
+    varying vec3 fNormal;       // normal vector in camera space (to be interpolated)
+    varying vec3 fLight;
+    varying vec3 fViewer;
+
+    void main(){
+        // compute position in camera frame
+        vec3 posC = (mModelView * vPosition).xyz;
+
+        // compute normal in camera frame
+        fNormal = (mNormals * vNormal).xyz;
+
+        // compute light vector in camera frame
+        if(lightPosition.w == 0.0) 
+            fLight = normalize((mViewVectors * lightPosition).xyz);
+        else 
+            fLight = normalize((mView*lightPosition).xyz - posC);
+
+        // Compute the view vector
+        // fViewer = -fPosition; // Perspective projection
+        fViewer = vec3(0,0,1); // Parallel projection only
+
+        // Compute vertex position in clip coordinates (as usual)
+        gl_Position = mProjection * mModelView * vPosition;
+
+        // make correction for left handed system of clip space
+        //gl_Position.z = -gl_Position.z;
+    }
+    </script>
+    <script id="fragment-shader-2" type="x-shader/x-fragment">
+    precision mediump float;
+
+    varying vec3 fPosition;
+    varying vec3 fNormal;
+
+    uniform vec3 color;
+    const float shininess = 60.0;
+
+    const vec3 lightAmb = vec3(0.2, 0.2, 0.2);
+    const vec3 lightDif = vec3(0.5, 0.5, 0.5);
+    const vec3 lightSpe = vec3(1.0, 1.0, 1.0);
+
+    vec3 ambientColor = lightAmb * color;
+    vec3 diffuseColor = lightDif * color;
+    vec3 specularColor = lightSpe * vec3(1.0, 1.0, 1.0);
+
+    varying vec3 fLight;
+    varying vec3 fViewer;
+
+    void main() {
+
+        vec3 L = normalize(fLight);
+        vec3 V = normalize(fViewer);
+        vec3 N = normalize(fNormal);
+
+        // Compute the halfway vector for Phong-Blinn model
+        vec3 H = normalize(L+V);
+
+        // compute diffuse reflection, don't let the vertex be illuminated from behind...
+        float diffuseFactor = max( dot(L,N), 0.0 );
+        vec3 diffuse = diffuseFactor * diffuseColor;
+
+        // compute specular reflection
+        float specularFactor = pow(max(dot(N,H), 0.0), shininess);
+        vec3 specular = specularFactor * specularColor;
+
+        // specular reflection should be 0 if normal is pointing away from light source
+        if( dot(L,N) < 0.0 ) {
+            specular = vec3(0.0, 0.0, 0.0);
+        }
+
+        // add all 3 components from the illumination model (ambient, diffuse and specular)
+        gl_FragColor = vec4(ambientColor + diffuse + specular, 1.0);
+    }
+    </script>
+        <script type="text/javascript" src="common/webgl-utils.js"></script>
+        <script type="text/javascript" src="common/initShaders.js"></script>
+        <script type="text/javascript" src="common/MV.js"></script>
+        <script type="text/javascript" src="common/cube.js"></script>
+        <script type="text/javascript" src="common/sphere.js"></script>
+        <script type="text/javascript" src="common/cylinder.js"></script>
+        <script type="text/javascript" src="3d-object-modelling-robotic-hand.js"></script>
+
+        <style>
+            body {
+              color: #000;
+              font-family:Tahoma;
+              font-size:13px;
+              font-weight: bold;
+              background-color: #000000;
+              background-image: url("imgs/background.jpg");
+            }
+
+            #container {
+              position: absolute;
+              border-radius: 5px;
+            }
+
+            #workDescription {
+              background:#eeeeee;
+              position: absolute;
+              left: 960px; top: 8px;
+              padding:0;
+              margin:0;
+              overflow:hidden;
+              width: 600px;
+              border-radius: 5px;
+              text-align: center;
+            }
+
+            #authorsInfo {
+              background:#eeeeee;
+              position: absolute;
+              left: 960px; top: 248px;
+              padding:0;
+              margin:0;
+              overflow:hidden;
+              width: 600px;
+              border-radius: 5px;
+              text-align: center;
+            }
+
+            #instructions {
+              background:#eeeeee;
+              position: absolute;
+              left: 960px; top: 448px;
+              padding:0;
+              margin:0;
+              overflow:hidden;
+              width: 600px;
+              border-radius: 5px;
+              text-align: center;
+            }
+
+            #settings {
+              background:#eeeeee;
+              position: absolute;
+              left: 960px; top: 702px;
+              padding:0;
+              margin:0;
+              overflow:hidden;
+              width: 600px;
+              border-radius: 5px;
+              text-align: center;
+            }
+
+            a {
+              color: #35b0ab;
+            }
+        </style>
+    </head>
+    <body id ="mainbody">
+      <title>3D Object Modelling - Industrial Automated Robotic Hand</title>
+        <div id="container" style="display: inline-block">
+            <canvas id="gl-canvas" width="946" height="946" style="border-radius: 5px;"> Oops... your browser doesn't support the HTML5 canvas element"
+            </canvas>
+        </div>
+
+        <br/>
+        <br/>
+
+        <div id="workDescription">
+            <h2>
+                <a href="https://www.fct.unl.pt/en/education/course/integrated-master-computer-science">
+                    Computer Science and Engineering
+                    <br/>
+                    Integrated Master
+                </a>
+            </h2>
+            <h3>
+                @ <a href="https://www.fct.unl.pt/en"><i>FCT NOVA | FCT/UNL
+                <br/>
+                (Faculty of Sciences and Technology of New University of Lisbon)</i></a>
+            </h3>
+
+            <h3>
+                <a href="http://www.unl.pt/guia/2018/fct/UNLGI_getUC?uc=8150">
+                    Computer Graphics and Interfaces
+                </a>
+                <br/>
+                (2016/2017)
+            </h3>
+            <h4>
+                Lab Work 3
+                <br/>
+                (3D Object Modelling - Industrial Automated Robotic Hand)
+            </h4>
+        </div>
+
+        <div id="authorsInfo">
+            <h2>
+                Authors/Contributors
+            </h2>
+            <h3>
+                <u><i>R&uacute;ben Andr&eacute; Barreiro</i></u>
+            </h3>
+            <h4>
+                no. 42648 (<a href="mailto:r.barreiro@campus.fct.unl.pt">r.barreiro@campus.fct.unl.pt</a>)
+            </h4>
+
+            <h3>
+                <u><i>Daniel Filipe Pimenta</i></u>
+            </h3>
+            <h4>
+                no. 45404 (<a href="mailto:d.pimenta@campus.fct.unl.pt">d.pimenta@campus.fct.unl.pt</a>)
+            </h4>
+        </div>
+
+        <div id="instructions">
+            <h2>
+                Instructions
+            </h2>
+            <font size="2">
+                - Use <i>'Q'</i> and <i>'W'</i> keys to rotate the <i>Robotic Hand</i>'s arm;
+                <br/>
+                - Use <i>'A'</i> and <i>'S'</i> keys to rotate the <i>Robotic Hand</i>'s upper joint;
+                <br/>
+                - Use <i>'Z'</i> and <i>'X'</i> keys to rotate the <i>Robotic Hand</i>'s lower joint;
+                <br/>
+                - Use <i>'O'</i> and <i>'P'</i> keys to move the <i>Robotic Hand</i>'s claws;
+                <br/>
+                - Use <i>'K'</i> and <i>'L'</i> keys to rotate the <i>Robotic Hand</i>;
+                <br/>
+                - Use <i>Left Arrow (←)</i> key to move the <i>Robotic Hand</i>'s base to the left;
+                <br/>
+                - Use <i>Right Arrow (→)</i> key to move the <i>Robotic Hand</i>'s base to the right;
+                <br/>
+                - Use <i>Up Arrow (↑)</i> key to move the <i>Robotic Hand</i>'s base forward;
+                <br/>
+                - Use <i>Down Arrow (↓)</i> key to move <i>Robotic Hand</i>'s base backward;
+                <br/>
+                - Choose the pretended <i>Angles Factors</i> (<i>Theta</i> and <i>Gamma</i> <i>Angles</i>)
+                <br/>
+                for adjust the settings for the <i>Axonometric Projection</i>;
+                <br/>
+                <br/>
+            </font>
+        </div>
+
+        <div id="settings">
+            <h2>
+                Settings/Adjustments
+            </h2>
+
+            <u><i>Axonometric Projection</i></u>
+            <br/>
+            <br/>
+            Gamma Angle
+            <br/>
+            <input id="gamma" type="range" min="0" max="90" step="1" value="19.4205368891236">
+            <br/>
+            Theta Angle
+            <br/>
+            <input id="theta" type="range" min="0" max="360" step="1" value="339.731932804673">
+            <br/>
+            <hr/>
+            <u><i>Render Mode</i></u>
+            <br/>
+            <br/>
+            <select id="render">
+                <option> Filled </option>
+                <option> Wire Frame </option>
+            </select>
+
+            <br/>
+            <br/>
+        </div>
+    </body>
+</html>
