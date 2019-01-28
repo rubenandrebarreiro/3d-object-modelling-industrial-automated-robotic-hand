@@ -2,7 +2,7 @@
 
 > A [**_3rd year's project_**](http://www.unl.pt/guia/2018/fct/UNLGI_getCurso?curso=935) of the [**_BSc. degree of Computer Sciences and Engineering_**](https://www.fct.unl.pt/en/education/course/integrated-master-computer-science/) made in [**_FCT NOVA (Faculty of Sciences and Technology of New University of Lisbon)_**](https://www.fct.unl.pt/), in the subject of [**_Computer Graphics and Interfaces_**](http://www.unl.pt/guia/2018/fct/UNLGI_getUC?uc=8150). This project was built using [**_HTML_**](https://www.w3schools.com/html/), [**_CSS_**](https://www.w3schools.com/css/), [**_JavaScript_**](https://www.w3schools.com/js/) and [**_WebGL_**](https://get.webgl.org/). The application allows to move and manipulate an _Industrial Automated Robotic Hand_, all using _3D Modelling_ and _3D Objects_. The _Robotic Hand_ can be _moved along the floor_, _do grab movements_ and _rotate some of its own components_. The movements and actions of the _Robotic Hand_ are always performed using the keyboard and you can see all the action of multiple angles, using an _Axonometric Projection_!
 
-> You can view an _online demo_, [clicking here](https://rubenandrebarreiro.github.io/projects/webgl/3d-object-modelling-automated-industrial-robotic-hand/3d-object-modelling-industrial-automated-robotic-hand.html)!
+> You can view an _online demo_, [clicking here](https://rubenandrebarreiro.github.io/projects/webgl/3d-object-modelling-industrial-automated-robotic-hand/3d-object-modelling-industrial-automated-robotic-hand.html)!
 
 
 ## Screenshots
@@ -60,11 +60,26 @@ You can run the application, by open the following file presented in the _root_ 
 
 Instructions (also available in the _canvas_ of the application):
 
-1) Use **_'Q'_** and **_'A'_** keys dive/emerge. Use **_click/drag/release_** in the **_canvas_** to move center point
+1) Use **_'Q'_** and **_'W'_** keys to rotate the **_Robotic Hand_**'s arm
 
-2) Choose the current **_Fractal's Set_** in use (**_Benoit Mandelbrot_** or **_Gaston Julia_**)
+2) Use **_'A'_** and **_'S'_** keys to rotate the **_Robotic Hand_**'s upper joint
 
-3) Choose also the current **_Factor_** to the **_Scale_** of the current **_Fractal_** in use
+3) Use **_'Z'_** and **_'X'_** keys to rotate the **_Robotic Hand_**'s lower joint
+
+4) Use **_'O'_** and **_'P'_** keys to move the **_Robotic Hand_**'s claws
+
+5) Use **_'K'_** and **_'L'_** keys to rotate the **_Robotic Hand_**'s hand
+
+6) Use **_Left Arrow (←)_** key to move the **_Robotic Hand_**'s base to the left
+
+7) Use **_Right Arrow (→)_** key to move the **_Robotic Hand_**'s base to the right
+
+8) Use **_Up Arrow (↑)_** key to move the **_Robotic Hand_**'s base forward
+
+9) Use **_Down Arrow (↓)_** key to move **_Robotic Hand_**'s base backward
+
+10) Choose the pretended **_Angles Factors_** (**_Theta_** and **_Gamma Angles_**) for adjust the settings for the **_Axonometric Projection_**
+
 
 #### Notes (IMPORTANT)
 1) It's **_mandatory_** to have the folder called **_common_** in the local repository, because it's where are the necessary **_WebGL utilities_**, **_geometric/solid figures_** and **_other libraries_**
