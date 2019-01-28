@@ -1,19 +1,19 @@
-# 3D Object Modelling - Robotic Hand
+# 3D Object Modelling - Industrial Automated Robotic Hand
 
 > A [**_3rd year's project_**](http://www.unl.pt/guia/2018/fct/UNLGI_getCurso?curso=935) of the [**_BSc. degree of Computer Sciences and Engineering_**](https://www.fct.unl.pt/en/education/course/integrated-master-computer-science/) made in [**_FCT NOVA (Faculty of Sciences and Technology of New University of Lisbon)_**](https://www.fct.unl.pt/), in the subject of [**_Computer Graphics and Interfaces_**](http://www.unl.pt/guia/2018/fct/UNLGI_getUC?uc=8150). This project was built using [**_HTML_**](https://www.w3schools.com/html/), [**_CSS_**](https://www.w3schools.com/css/), [**_JavaScript_**](https://www.w3schools.com/js/) and [**_WebGL_**](https://get.webgl.org/). The application allows to move and manipulate an _Industrial Automated Robotic Hand_, all using _3D Modelling_ and _3D Objects_. The _Robotic Hand_ can be _moved along the floor_, _do grab movements_ and _rotate some of its own components_. The movements and actions of the _Robotic Hand_ are always performed using the keyboard and you can see all the action of multiple angles, using an _Axonometric Projection_!
 
-> You can view an _online demo_, [clicking here](https://rubenandrebarreiro.github.io/projects/webgl/3d-object-modelling-robotic-hand/3d-object-modelling-robotic-hand.html)!
+> You can view an _online demo_, [clicking here](https://rubenandrebarreiro.github.io/projects/webgl/3d-object-modelling-automated-industrial-robotic-hand/3d-object-modelling-industrial-automated-robotic-hand.html)!
 
 
 ## Screenshots
 
-![https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-robotic-hand/master/imgs/screenshot-1.jpg](https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-robotic-hand/master/imgs/screenshot-1.jpg)
-###### 3D Object Modelling (Robotic Hand) - Screenshot #1
+![https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/master/imgs/screenshot-1.jpg](https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/master/imgs/screenshot-1.jpg)
+###### 3D Object Modelling (Industrial Automated Robotic Hand) - Screenshot #1
 
 ***
 
-![https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-robotic-hand/master/imgs/screenshot-2.jpg](https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-robotic-hand/master/imgs/screenshot-2.jpg)
-###### 3D Object Modelling (Robotic Hand) - Screenshot #1
+![https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/master/imgs/screenshot-2.jpg](https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/master/imgs/screenshot-2.jpg)
+###### 3D Object Modelling (Industrial Automated Robotic Hand) - Screenshot #1
 
 ***
 
@@ -30,32 +30,32 @@ To install and run this application, you will only need:
 ### Installation
 To install this application, you will only need to _download_ or _clone_ this repository and run the application locally:
 
-> You can do it downloading the [**_.zip file_**](https://github.com/rubenandrebarreiro/3d-object-modelling-robotic-hand/archive/master.zip) in download section of this repository.
+> You can do it downloading the [**_.zip file_**](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/archive/master.zip) in download section of this repository.
 
 > Or instead, by cloning this repository by a [**_Git Client based GUI_**](https://git-scm.com/downloads/guis), using [**_HTTPS_**](https://en.wikipedia.org/wiki/HTTPS) or [**_SSH_**](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol), by one of the following link:
 * [**_HTTPS_**](https://en.wikipedia.org/wiki/HTTPS):
 ```
-https://github.com/rubenandrebarreiro/3d-object-modelling-robotic-hand.git
+https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand.git
 ```
 * [**_SSH_**](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol):
 ```
-git@github.com:rubenandrebarreiro/3d-object-modelling-robotic-hand.git
+git@github.com:rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand.git
 ```
 
 > Or even, by running one of the following commands in a **_Git Bash Console_**:
 * [**_HTTPS_**](https://en.wikipedia.org/wiki/HTTPS):
 ```
-git clone https://github.com/rubenandrebarreiro/3d-object-modelling-robotic-hand.git
+git clone https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand.git
 ```
 * [**_SSH_**](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol):
 ```
-git clone git@github.com:rubenandrebarreiro/3d-object-modelling-robotic-hand.git
+git clone git@github.com:rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand.git
 ```
 
 ## After the instalation
 You can run the application, by open the following file presented in the _root_ folder of this repository:
 ```
-3d-object-modelling-robotic-hand.html
+3d-object-modelling-industrial-automated-robotic-hand.html
 ```
 
 Instructions (also available in the _canvas_ of the application):
@@ -71,7 +71,7 @@ Instructions (also available in the _canvas_ of the application):
 
 2) It's also **_mandatory_** to have the respective application's **_JavaScript_** file in the _root_ folder of this repository
 ```
-3d-object-modelling-robotic-hand.js
+3d-object-modelling-industrial-automated-robotic-hand.js
 ```
 
 ## Built with
