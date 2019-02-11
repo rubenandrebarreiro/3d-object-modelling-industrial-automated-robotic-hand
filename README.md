@@ -128,5 +128,5 @@ Instructions (also available in the _canvas_ of the application):
 
 ## Classifications/Final Approval Grades
 
-### Approval Grade of Part 1 of Lab Work
+### Approval Grade of Lab Work
 * 19 of 20
