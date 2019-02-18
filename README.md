@@ -1,5 +1,46 @@
 # 3D Object Modelling - Industrial Automated Robotic Hand
 
+![https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/master/imgs/JPGs/banner-1.jpg](https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/master/imgs/JPGs/banner-1.jpg)
+######  3D Object Modelling (Industrial Automated Robotic Hand) - Banner #1
+
+***
+
+
+## Current Status
+![contributor for this repository](https://img.shields.io/badge/contributor-daniel&nbsp;filipe&nbsp;pimenta-blue.svg)
+[![contributor for this repository](https://img.shields.io/badge/contributor-rubenandrebarreiro-blue.svg)](https://github.com/rubenandrebarreiro/) [![developed in](https://img.shields.io/badge/developed&nbsp;in-fct&nbsp;nova-blue.svg)](https://www.fct.unl.pt/)
+[![current version](https://img.shields.io/badge/version-1.0-magenta.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+
+[![status of this version no. 1](https://img.shields.io/badge/status-completed-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+[![status of this version no. 2](https://img.shields.io/badge/status-final-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+[![status of this version no. 3](https://img.shields.io/badge/status-stable-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+[![status of this version no. 4](https://img.shields.io/badge/status-documented-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+
+[![keyword of this version no. 1](https://img.shields.io/badge/keyword-2d-brown.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+[![keyword of this version no. 2](https://img.shields.io/badge/keyword-graphics-brown.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+[![keyword of this version no. 3](https://img.shields.io/badge/keyword-multimedia-brown.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+[![keyword of this version no. 4](https://img.shields.io/badge/keyword-geometry-brown.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+
+[![technology used no. 1](https://img.shields.io/badge/built&nbsp;with-html-red.svg)](https://www.w3schools.com/html/) [![technology used no. 2](https://img.shields.io/badge/built&nbsp;with-css-red.svg)](https://www.w3schools.com/css/) [![technology used no. 3](https://img.shields.io/badge/built&nbsp;with-javascript-red.svg)](https://www.w3schools.com/js/) [![technology used no. 4](https://img.shields.io/badge/built&nbsp;with-webgl-red.svg)](https://get.webgl.org/)
+[![software used no. 1](https://img.shields.io/badge/software-atom-gold.svg)](http://atom.io/) 
+[![software used no. 2](https://img.shields.io/badge/software-brackets-gold.svg)](http://brackets.io/) 
+
+[![star this repository](http://githubbadges.com/star.svg?user=rubenandrebarreiro&repo=3d-object-modelling-industrial-automated-robotic-hand&style=flat)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/stargazers)
+[![fork this repository](http://githubbadges.com/fork.svg?user=rubenandrebarreiro&repo=3d-object-modelling-industrial-automated-robotic-hand&style=flat)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/fork)
+[![downloads of this repository](https://img.shields.io/github/downloads/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/total.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/archive/master.zip)
+[![price of this project](https://img.shields.io/badge/price-free-success.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/archive/master.zip)
+
+##### Current Progress of the Project
+
+[![current progress of this project](http://progressed.io/bar/100?title=&nbsp;completed&nbsp;)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/) 
+
+##### Final Approval Grade of the Project
+
+[![grade of this project](http://progressed.io/bar/19?scale=20&title=&nbsp;grade&nbsp;&suffix=&nbsp;)](https://github.com/rubenandrebarreiro/3d-object-modelling-industrial-automated-robotic-hand/)
+
+
+## Description
+
 > A [**_3rd year's project_**](http://www.unl.pt/guia/2018/fct/UNLGI_getCurso?curso=935) of the [**_BSc. degree of Computer Sciences and Engineering_**](https://www.fct.unl.pt/en/education/course/integrated-master-computer-science/) made in [**_FCT NOVA (Faculty of Sciences and Technology of New University of Lisbon)_**](https://www.fct.unl.pt/), in the subject of [**_Computer Graphics and Interfaces_**](http://www.unl.pt/guia/2018/fct/UNLGI_getUC?uc=8150). This project was built using [**_HTML (HyperText Markup Language)_**](https://www.w3schools.com/html/), [**_CSS (Cascade Style Sheets)_**](https://www.w3schools.com/css/), [**_JavaScript_**](https://www.w3schools.com/js/) and [**_WebGL (Web Graphics Library)_**](https://get.webgl.org/). The application allows to move and manipulate an _Industrial Automated Robotic Hand_, all using _3D Modelling_ and _3D Objects_. The _Robotic Hand_ can be _moved along the floor_, _do grab movements_ and _rotate some of its own components_. The movements and actions of the _Robotic Hand_ are always performed using the keyboard and you can see all the action of multiple angles, using an _Axonometric Projection_!
 
 > You can view an _online demo_, [clicking here](https://rubenandrebarreiro.github.io/projects/webgl/3d-object-modelling-industrial-automated-robotic-hand/3d-object-modelling-industrial-automated-robotic-hand.html)!
